@@ -1,0 +1,345 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Red Rose', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #28262c;
+    
+}
+
+header {
+    width: 100%;
+    height: 90vh;
+    
+    padding: 1rem 10rem;
+}
+
+.menu {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 6rem;
+    height: 3rem;
+    background: #F9F5FF;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    width: 30rem;
+    color: #F9F5FF;
+    list-style: none;
+    li {
+        transition: transform .2s;
+        &:hover {
+            transform: translateX(-4px);
+            color: #F9F5FF;
+            
+        }
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+.btn {
+    padding: 1.5rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    color: rgb(132, 0, 255);
+    cursor: pointer;
+    transition: transform .2s;
+    border: 1px solid rgb(132, 0, 255);
+    background: none;
+    &--purple {
+        background: rgb(132, 0, 255);
+        color: #F9F5FF;
+        &:hover {
+            background: rgb(147, 41, 247);
+            border: 1px solid rgb(147, 41, 247);
+        }
+    }
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
+
+.hero {
+    width: 100%;
+    margin-top: 9rem;
+    color: #F9F5FF;
+    display: flex;
+    &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 40px;
+        &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            height: 4px;
+            background: rgb(132, 0, 255);
+            margin-top: .8rem;
+        }
+    }
+    
+    &__text {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        font-weight: 100;
+    }
+    
+}
+
+.left {
+    max-width: 60rem;
+}
+
+.right {
+    img {
+        display: block;
+        width: 70%;
+        margin-left: auto;
+    }
+}
+
+
+
+.about {
+    padding: 1rem 7rem;
+    
+    p {
+        color: rgb(132, 0, 255);
+        letter-spacing: 0.5px;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 2rem auto 6rem auto;
+        
+        
+        
+        
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            height: 4px;
+            background: rgb(132, 0, 255);
+            margin: 4rem auto;
+            border-radius: 3px;
+        }
+    }
+    
+    &__text {
+        width: 60%;
+        letter-spacing: 3px!important;
+    }
+    
+    h2 {
+        text-align: center;
+        color:rgb(132, 0, 255);
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+}
+.cardgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12rem;
+}
+
+.card {
+    width: 100%;
+    height: 35rem;
+    border-radius: 20px;
+    background: #28262c;
+    box-shadow:  5px 5px 14px #1d1c20, 
+    -5px -5px 14px #333038;
+    text-align: center;
+    padding: 2rem;
+    i {color: rgb(132, 0, 255); font-size: 4.4rem;}
+    p {
+        margin-top: 2rem;
+        color: rgb(168, 168, 168);
+        font-weight: 100;
+    }
+}
+
+
+section {
+    margin-top: 5rem;
+    
+    h2 {
+        position: relative;
+    }
+    
+    h2::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        background: rgb(132, 0, 255);
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        border-radius: 1000px;
+    }
+}
+
+.form {
+    background: #eee;
+    margin: 0 auto;
+    max-width: 85%;
+    border-radius: 12px;
+    background: #28262c;
+    box-shadow:  5px 5px 14px #1d1c20, 
+    -5px -5px 14px #333038;
+    padding: 2rem;
+    position: relative;
+    display: flex;  
+    
+    &__left {
+        min-width: 40rem;
+    }
+    
+    &__right {
+        display: grid;
+        width: 100%;
+        grid-template-columns: min-content 1fr;
+        padding: 6rem;
+        align-items: center;    
+        font-size: 2rem;
+        
+        i {margin-right: 2rem;}
+        
+        span {
+            display: flex;
+            align-items: center;
+            color: rgb(168, 168, 168);
+        }
+        
+        img {   
+            display: block;
+            width: 100%;
+            grid-column: -1 / 1;
+            justify-self: center;
+            
+        }
+        
+        
+    }
+    
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        outline: none;
+        border-radius: 50px;
+        border: none;
+        background: #28262c;
+        box-shadow: inset 5px 5px 14px #1d1c20, 
+        inset -5px -5px 14px #333038;
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        margin-bottom: 6rem;
+        letter-spacing: 0.5px;
+        color: rgb(168, 168, 168);
+        font-family: inherit;
+        font-size: 1.5rem;
+        
+        &:first-of-type {
+            margin-top: 3rem;
+        }
+    }
+    
+    label {
+        position: absolute;
+        top: -45%;
+        left: 1%;
+        text-transform: initial;
+        color: rgb(132, 0, 255);
+    }
+    
+    textarea {
+        resize: none;
+        overflow-y: auto;
+    }
+    
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    i {color:rgb(132, 0, 255);}
+    
+}
+
+.input-container {
+    position: relative;
+}
+
+.contact {
+    padding-bottom: 10rem;
+    h2 {
+        text-align: center;
+        color:rgb(132, 0, 255);
+        text-transform: uppercase;
+        margin-bottom: 6rem;
+    }
+}
+
+footer {
+    background: rgb(147, 41, 247);
+    min-height: 10rem;
+    padding: 8rem 6rem;
+    position: relative;
+    
+    &::after {
+        content: '';
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background: rgb(147, 41, 247);
+        position: absolute;
+        top: -13%;
+        left: 15%;
+        transform: rotateZ(45deg);
+    }
+    
+    &::before {
+        content: '';
+        display: block;
+        width: 12rem;
+        height: 12rem;
+        background: #28262c;
+        position: absolute;
+        top: -43%;
+        left: 75%;
+        transform: rotateZ(45deg);
+    }
+}
